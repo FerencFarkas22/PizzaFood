@@ -1,0 +1,109 @@
+.menu {
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #242424;
+}
+
+.menu .menuTitle {
+    font-size: 40px;
+    margin-top: 20px;
+    color: whitesmoke;
+}
+
+.menu .menuList {
+    width: 80vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    gap: 20px;
+    padding: 60px 0;
+}
+
+.menu .menuList .menuItem{
+    text-align: center;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    min-height: 435px;
+    margin-bottom: 30px;
+    padding: 5px;
+    transition: 0.5s ease;
+    background-color: #715b5b;
+    color: white;
+    width: 300px;
+}
+
+.menu .menuList .menuItem:hover{
+    box-shadow: 0 3px 15px rgba(0,0,0,0.8);
+    
+
+}
+
+.menu .menuList .menuItem button {
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    color: wheat;
+    background-color: rgb(45, 44, 44);  
+}
+.menu .menuList .menuItem button:hover, .menu .menuList .menuItem button.active{
+    background-color: brown;
+    transition: .2s all linear; 
+}
+
+
+.menu .menuList .menuItem .addToCart {
+   display: flex;
+   justify-content: center;
+   width: 80%;
+   background-color: rgb(55, 48, 48);  
+   text-align: center;
+align-items: center;   
+margin: 5px auto; 
+}
+
+.menu .menuList .menuItem div {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.menu .menuList .menuItem p.price{
+    font-size: 20px;
+    padding: 10px;
+}
+.menu .menuList .menuItem p.description{
+    padding: 10px;
+}
+
+@media(max-width:1450px){
+    .menu .menuList {
+        width: 85vw;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media(max-width:1200px){
+    .menu .menuList {
+        width: 85vw;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:720px){
+    .menu .menuList .menuItem{
+        width: 80vw;
+    }
+    .menu .menuList {
+        width: 95vw;
+        grid-template-columns: 1fr;
+    }
+}

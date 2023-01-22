@@ -1,0 +1,27 @@
+.NotFound{
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #242424;
+    color: wheat;
+}
+.NotFound a {
+    text-decoration: none;
+    color: rgb(224, 63, 63);
+    font-size: 25px;
+    transition: .5s all ease-in-out;
+    
+}.NotFound a:hover {
+    text-decoration: none;
+    color: rgb(193, 27, 27);
+    font-size: 25px;
+}
+
+.NotFound h2{
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}

@@ -1,6 +1,11 @@
 import React from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import {AnimatePresence} from "framer-motion"
+
+
+
+
+
 const Content = ({routes}) => {
   const location = useLocation(); /*Használhatóak lesznek a linkek*/
   return (

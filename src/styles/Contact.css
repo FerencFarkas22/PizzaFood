@@ -1,0 +1,107 @@
+.contact {
+    width: 100%;
+    min-height: 90vh, auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: rgb(59, 55, 55);
+    background-color: #242424;
+}
+
+
+.contact-left {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+
+}
+
+.contact-right {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.contact-right h2 {
+    font-size: 50px;
+    font-weight: 500;
+    color: wheat;
+}
+
+.contact-right label {
+    margin-top: 15px;
+    color: gray;
+}
+
+.contact-right form {
+    width: 30vw;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(233, 233, 233);
+    border-radius: 10px;
+}
+
+.contact-right input {
+    height: 30px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(59, 55, 55);
+    outline: none;
+    background-color: rgb(233, 233, 233);
+
+}
+
+.contact-right form input::placeholder,
+.contact-right form textarea::placeholder {
+    font-weight: bold;
+    color: rgb(59, 55, 55);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-right form input::focus,
+.contact-right form textarea::focus {
+    outline: none;
+
+}
+
+.contact-right form textarea {
+    margin-top: 15px;
+    height: 70px;
+    border: none;
+    width: 100%;
+    background-color: rgb(233, 233, 233);
+    border-bottom: 1px solid rgb(59, 55, 55);
+    resize: none;
+    margin-bottom: 10px;
+
+}
+
+.contact-right form button {
+    margin-top: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 5px;
+    background-color: rgb(59, 55, 55);
+    color: wheat;
+}
+
+.contact-right form hr {
+    margin: 10px 0 10px 0;
+}
+
+h3,
+form p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+iframe {
+    height: 200px;
+    margin: 20px;
+}

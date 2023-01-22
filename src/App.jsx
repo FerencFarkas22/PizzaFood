@@ -9,6 +9,9 @@ import './App.css'
 import Home from './Pages/Home'
 import Menu from './Pages/Menu'
 import Reservation from './Pages/Reservation'
+import Cart from './Pages/Cart'
+import Contact from './Pages/Contact'
+import PageNotFound from './Pages/PageNotFound'
 
 //2:31:43
 
@@ -17,10 +20,10 @@ function App() {
   const pages = [
     {name: "Kezdőlap", path: '/', menubar: true, element: <Home/>, icon: "home"},
     {name: "Étlap", path: '/menu', menubar: true, element: <Menu/>, icon: "food-menu"},
-    {name: "Kosár", path: '/cart', menubar: true, element: <>Kosár</>, icon: "cart"},
+    {name: "Kosár", path: '/cart', menubar: true, element: <Cart/>, icon: "cart"},
     {name: "Asztalfoglalás", path: '/reservation', menubar: true, element: <Reservation/> , icon:"table"},
-    {name: "Kapcsolat", path: '/contact', menubar: true, element: <>Kapcsolat</>, icon: "contact"},
-    {name: "notFound", path: "*", menubar:false, element:<>Not Found</>, icon: null}
+    {name: "Kapcsolat", path: '/contact', menubar: true, element: <Contact/>, icon: "contact"},
+    {name: "notFound", path: "*", menubar:false, element:<PageNotFound/>, icon: null}
   ]
   
   return (
