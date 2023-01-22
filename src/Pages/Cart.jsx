@@ -19,7 +19,7 @@ const Cart = () => {
   return (
     <CustomMotion className="cart">
       <h1>Kosár tartalma</h1>
-      {cart.length === 0 && <h2>Nincs semmi a kosárban <Link to="/menu">Hopp</Link></h2>}
+      {cart.length === 0 && <h2>Nincs semmi a kosárban, <Link to="/menu">Vissza az étlaphoz</Link></h2>}
       {cart.length !== 0 && (<table className='cartList'>
         <thead>
           <th align='left'>Megnevezés</th>

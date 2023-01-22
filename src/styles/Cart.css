@@ -11,6 +11,17 @@
     font-weight: 300;
 }
 
+.cart  a{
+    color: rgb(181, 45, 45);
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+
+
+.cart  a:hover{
+    color: rgb(249, 90, 90);
+}
+
 .cart .cartList {
     width: 100%;
     font-size: 30px;
