@@ -110,15 +110,19 @@ iframe {
 @media(max-width: 900px) {
     .contact {
         width: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        justify-content: center;
+    }
+    .contact h2{
+        font-size: 11vw;
+        margin-bottom: 20px;
     }
     .contact-left {
         display: none;
     }
 
     .contact-right {
-        width: 100%;
+        width: 95%;
     }
 
     .contact-right form{

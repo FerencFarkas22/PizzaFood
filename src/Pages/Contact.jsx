@@ -1,27 +1,45 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import '../styles/Contact.css'
 import LeftPicture from '../assets/makingpizza.jpeg'
 import CustomMotion from '../components/CustomMotion'
 const Contact = () => {
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm('service_n8cs91q', 'template_wy8hjq5', form.current, 'JQ6mZwTuO48I8YIij')
+        .then((result) => {
+            console.log(result.text);
+            console.log("message sent");
+        }, (error) => {
+            console.log(error.text);
+        });
+    };
+
+
+
     return (
         <CustomMotion className="contact">
             <div style={{ backgroundImage: `url(${LeftPicture})` }} className="contact-left"></div>
             <div className="contact-right">
                 <h2>Kapcsolatfelvétel</h2>
-                <form action="" method='post'>
+                <form ref={form} onSubmit={sendEmail}>
 
                     <label>Teljes név</label>
-                    <input type="text" autoComplete='off' placeholder='Adja meg a nevét' />
+                    <input name='user_name' type="text" autoComplete='off' placeholder='Adja meg a nevét' />
 
                     <label>Email</label>
-                    <input type="email" autoComplete='off' placeholder='Adja meg az e-mail címét' />
+                    <input name='user_email' type="email" autoComplete='off' placeholder='Adja meg az e-mail címét' />
 
                     <label>Telefonszám</label>
-                    <input type="text" autoComplete='off' placeholder='Adja meg a telefonszámát' />
+                    <input name='user_mobilenumber' type="text" autoComplete='off' placeholder='Adja meg a telefonszámát' />
 
                     <label>Miben setíthetünk?</label>
-                    <textarea cols="15" rows="10" placeholder='Üzenet...'></textarea>
-                    <button>
+                    <textarea name='message' cols="15" rows="10" placeholder='Üzenet...'></textarea>
+                    <button type="submit">
                         Küldés
                     </button>
 
