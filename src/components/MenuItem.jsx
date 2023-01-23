@@ -22,7 +22,7 @@ const MenuItem = ({food, unit}) => {
   return (
     <div className="menuItem"> 
     <div style={{backgroundImage: `url(${food.image})`}}></div>
-        <h1>{food.name}</h1>
+        <h2>{food.name}</h2>
         <p className='description'>
             {food.description}
         </p>

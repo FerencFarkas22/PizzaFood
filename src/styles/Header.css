@@ -19,13 +19,14 @@
     height: 70%;
 }
 
-.navbar-right{
+.navbar-right, .navbar-right-none{
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.navbar-right a {
+
+.navbar-right a, .navbar-right-none a{
     color: white;
     text-decoration: none;
     margin: 10px;
@@ -39,15 +40,13 @@
     color: #e93838;
     transition: 0.2s all linear;
 }
-.navbar-right a box-icon{
+.navbar-right a box-icon,.navbar-right-none a box-icon{
     display: inherit;
     width: 100%;
 }
 
 
-
-
-.navbar-right button{
+.navbar-left button{
     border: none;
     outline: none;
     background-color: transparent;
@@ -56,15 +55,45 @@
 
 
 @media(max-width: 900px){
-    .navbar-right button{
-        display: block;
+    .navbar-left{
+        height: 70px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
-    .navbar-right a {
-        display: none;
+    .HamburgerButton{
+        cursor: pointer;
     }
     .navbar {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        padding: 0 60px;
+        align-items: center;
+        height: auto;
+    }
+    .navbar-right{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .navbar-right img{
+       height: 60px;
+    }
+    .navbar-right-none{
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        
+    }
+    .navbar-left button{
+        display: block;
+    }
+    /*.navbar-right a {
+        display: block;
+    }*/
+
+    .navbar {
+        display: flex;
         padding: 0 50px;
         align-items: center;
     }

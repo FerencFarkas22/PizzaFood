@@ -1,9 +1,11 @@
-.cart{
+.cart {
     padding: 20px;
     width: 100%;
     min-height: 90vh;
     background-color: #242424;
     color: wheat;
+   
+
 }
 
 .cart h1 {
@@ -11,14 +13,14 @@
     font-weight: 300;
 }
 
-.cart  a{
+.cart a {
     color: rgb(181, 45, 45);
     text-decoration: none;
     transition: 0.2s linear;
 }
 
 
-.cart  a:hover{
+.cart a:hover {
     color: rgb(249, 90, 90);
 }
 
@@ -27,6 +29,7 @@
     font-size: 30px;
     font-weight: 200;
 }
+
 .cart button {
     outline: none;
     border: none;
@@ -37,6 +40,7 @@
     cursor: pointer;
     transition: 0.2s all ease;
 }
+
 .cart button:hover {
     outline: none;
     border: none;
@@ -47,9 +51,37 @@
     cursor: pointer;
 }
 
-.cart table{
+.cart table {
     padding: 30px 0;
 }
-.cart table td{
+
+.cart table td {
     padding: 15px;
+}
+
+
+
+
+@media (max-width:768px) {
+    .cart h1 {
+        text-align: center;
+    }
+
+    .cartList thead {
+        display: none;
+    }
+
+    .cartList,
+    .cartList tbody,
+    .cartList tr,
+    .cartList td {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .cartList tr {
+        margin-bottom: 30px;
+        border: 1px solid white;
+    }
 }

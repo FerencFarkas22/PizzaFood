@@ -30,9 +30,9 @@ export const PizzaList = [
     description: "paradicsomos alap, mozzarella, oregánó",
     sizes: [
       {size: 26, price:2390},
-      {size: 32, price:3590},
-      {size: 38, price:3790},
-      {size: 45, price:5690},
+      {size: 32, price:2590},
+      {size: 38, price:2790},
+      {size: 45, price:3690},
 
     ]
   },
@@ -42,8 +42,8 @@ export const PizzaList = [
     description: "paradicsomos alap, mozzarella, oregánó, ananász",
     sizes: [
       {size: 26, price:2590},
-      {size: 32, price:3790},
-      {size: 45, price:3990}
+      {size: 32, price:2790},
+      {size: 45, price:2990}
     ]
   },
   {
@@ -52,8 +52,8 @@ export const PizzaList = [
     description: "par.szósz, sonka, ananász, mozz.sajt",
     sizes: [
       {size: 26, price:2590},
-      {size: 32, price:3790},
-      {size: 45, price:3990}
+      {size: 32, price:2790},
+      {size: 45, price:2990}
     ]
   },
   {
@@ -62,8 +62,8 @@ export const PizzaList = [
     description: "par. szósz, mozzarella, roquefort, parmezán, füstölt sajt",
     sizes: [
       {size: 26, price:2590},
-      {size: 32, price:3790},
-      {size: 45, price:3990}
+      {size: 32, price:2790},
+      {size: 45, price:2990}
     ]
   },
   {

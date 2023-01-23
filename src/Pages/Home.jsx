@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import PizzaBg from '../assets/pizza.jpeg'
 import "../styles/Home.css"
 import CustomMotion from '../components/CustomMotion'
 
@@ -11,12 +10,11 @@ const Home = (props) => {
 
     return (
         <CustomMotion
-        className='Home'
-         style={{backgroundImage:`url(${PizzaBg})`}}
-         >
+        className='Home'>
+            <div className='background'></div>
             <div className="homeContainer">
                 <h1>PizzaFood</h1>
-                <p>Sül már a ropogós - viszi a robogós</p>
+                <p>A legjobb pizzéria!</p>
                 <Link to="/menu">
                     <button>Rendelés</button>
                 </Link>
