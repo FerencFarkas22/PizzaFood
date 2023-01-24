@@ -15,7 +15,7 @@ const Contact = () => {
     const form = useRef();
 
   const notify= () => toast(`Az email sikeresen elküldve`, {
-        position: "top-center",
+        position: "bottom-center",
         autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -26,7 +26,7 @@ const Contact = () => {
         type:"success"
       })
       const wrongDatas= () => toast(`Minden mező kitöltése kötelező`, {
-        position: "top-center",
+        position: "bottom-center",
         autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,

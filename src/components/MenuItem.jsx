@@ -7,7 +7,7 @@ const MenuItem = ({ food, unit }) => {
   const [size, setSize] = useState(food.sizes[0]);
   const { cart, setCart } = useContext(CartContext);
   const notify = () => toast(`${food.name} a kosárba került!`, {
-    position: "top-center",
+    position: "bottom-center",
     autoClose: 1000,
     hideProgressBar: false,
     closeOnClick: true,
