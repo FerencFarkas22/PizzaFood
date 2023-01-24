@@ -12,7 +12,6 @@ import Reservation from './Pages/Reservation'
 import Cart from './Pages/Cart'
 import Contact from './Pages/Contact'
 import PageNotFound from './Pages/PageNotFound'
-
 //2:31:43
 
 function App() {
@@ -21,8 +20,8 @@ function App() {
     {name: "Kezdőlap", path: '/', menubar: true, element: <Home/>, icon: "home"},
     {name: "Étlap", path: '/menu', menubar: true, element: <Menu/>, icon: "food-menu"},
     {name: "Kosár", path: '/cart', menubar: true, element: <Cart/>, icon: "cart"},
-    {name: "Asztalfoglalás", path: '/reservation', menubar: true, element: <Reservation/> , icon:"table"},
-    {name: "Kapcsolat", path: '/contact', menubar: true, element: <Contact/>, icon: "contact"},
+    {name: "Asztalfoglalás", path: '/reservation', menubar: true, element: <Reservation/> , icon:"calendar-check"},
+    {name: "Kapcsolat", path: '/contact', menubar: true, element: <Contact/>, icon: "phone"},
     {name: "notFound", path: "*", menubar:false, element:<PageNotFound/>, icon: null}
   ]
   

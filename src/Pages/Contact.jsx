@@ -12,7 +12,7 @@ const Contact = () => {
     const [email, setEmail] = useState('');
     const [tel, setTel] = useState('');
     const [text, setText] = useState('');
-
+    const form = useRef();
 
   const notify= () => toast(`Az email sikeresen elküldve`, {
         position: "top-center",
@@ -37,7 +37,6 @@ const Contact = () => {
         type:"error"
       })
 
-      const form = useRef();
 
     const sendEmail = (e) => {
       e.preventDefault();
@@ -50,27 +49,24 @@ const Contact = () => {
             console.log(error.text);
         });
     };
+
+
     const handleWrong = () => {
         return wrongDatas();
     }
 
 
-
     function nameHandler(e){
         setName(e.target.value)
-        console.log(name);
     }
     function emailHandler(e){
         setEmail(e.target.value)
-        console.log(email);
     }
     function telHandler(e){
         setTel(e.target.value)
-        console.log(tel);
     }
     function textHandler(e){
         setText(e.target.value)
-        console.log(text);
     }
 
     return (
@@ -91,7 +87,7 @@ const Contact = () => {
 
                     <label>Miben setíthetünk?</label>
                     <textarea name='message' cols="15" rows="10"  onChange={textHandler}  placeholder='Üzenet...' required></textarea>
-                    <button type="submit" onClick={name==="" || email==="" || tel==="" || text === "" ? handleWrong :  notify}>
+                    <button className='sendButton'  type="submit" onClick={name==="" || email==="" || tel==="" || text === "" ? handleWrong :  notify}>
                         Küldés
                     </button>
                     <ToastContainer/>

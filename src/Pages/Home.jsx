@@ -14,7 +14,8 @@ const Home = (props) => {
             <div className='background'></div>
             <div className="homeContainer">
                 <h1>PizzaFood</h1>
-                <p>A legjobb pizzéria!</p>
+                <h2>A környék legjobb pizzái!</h2>
+                <p>Éttermünk közel 150 éves receptjei alapján működnek és a pizzáink kemencében sűlnek! Ha családias ízekre vágyik, térjen be hozzánk!</p>
                 <Link to="/menu">
                     <button>Rendelés</button>
                 </Link>

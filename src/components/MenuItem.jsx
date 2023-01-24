@@ -15,7 +15,8 @@ const MenuItem = ({ food, unit }) => {
     draggable: true,
     progress: undefined,
     theme: "dark",
-    type:"success"
+    type:"success",
+    zIndex:6,
   });
 
 
@@ -36,8 +37,8 @@ const MenuItem = ({ food, unit }) => {
     <div className="menuItemPage">
       <ToastContainer style={{width:"350px"}}/>
       <div className="menuItem">
-        <div style={{ backgroundImage: `url(${food.image})` }}></div>
-        <h2>{food.name}</h2>
+        <div className='foodImage' style={{ backgroundImage: `url(${food.image})` }}></div>
+        <div className="foodName"><h2>{food.name}</h2></div>
         <p className='description'>
           {food.description}
         </p>
@@ -45,7 +46,7 @@ const MenuItem = ({ food, unit }) => {
           return <button
             onClick={() => { setSize(csize) }}
             key={csize.size} className={csize === size ? "active" : ""}>
-            {csize.size}
+            {csize.size} {unit}
           </button>
         })}
         <p className='price'>{size.price} Ft</p>

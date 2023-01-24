@@ -4,10 +4,16 @@
     min-height: 90vh;
     background-color: #242424;
     color: wheat;
-   
-
 }
-
+.empty{
+    padding: 20px;
+    width: 100%;
+    min-height: 50vh;
+    background-color: #242424;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .cart h1 {
     font-size: 49px;
     font-weight: 300;

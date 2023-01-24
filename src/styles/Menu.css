@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Explora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Explora&family=Poiret+One&display=swap');
+
 .menu {
     width: 100%;
     min-height: auto;
@@ -9,11 +13,12 @@
 }
 
 .menu .menuTitle {
-    font-size: 40px;
+    font-size: 70px;
     margin-top: 20px;
     color: whitesmoke;
-}
+    font-family: 'Explora', cursive;
 
+}
 
 .menu .menuList {
     width: 80vw;
@@ -23,25 +28,41 @@
     place-items: center;
     gap: 20px;
     padding: 60px 0;
+    font-family: 'Poiret One', cursive;
+
 }
 
 .menu .menuList .menuItem{
     text-align: center;
-    box-shadow: 0 1px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 10px rgba(0,0,0,0.4);
     border-radius: 15px;
     min-height: 450px;
-    margin-bottom: 30px;
-    padding: 5px;
+    margin-bottom: 30px; 
     transition: 0.5s ease;
-    background-color: #715b5b;
+    background-color:  #355440;
     color: white;
     width: 300px;
 }
 
 .menu .menuList .menuItem:hover{
     box-shadow: 0 3px 15px rgba(0,0,0,0.8);
-    
 
+}
+
+.menu .menuList .menuItem .foodImage {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+.menu .menuList .menuItem .foodName{
+   padding-top:10px;
+}
+.menu .menuList .menuItem p.description{
+    padding: 5px;
+    min-height: 50px;
 }
 
 .menu .menuList .menuItem button {
@@ -58,6 +79,10 @@
     transition: .2s all linear; 
 }
 
+.menu .menuList .menuItem p.price{
+    font-size: 20px;
+    padding: 10px;
+}
 
 .menu .menuList .menuItem .addToCart {
    display: flex;
@@ -69,22 +94,8 @@ align-items: center;
 margin: 5px auto; 
 }
 
-.menu .menuList .menuItem div {
-    width: 100%;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-}
 
-.menu .menuList .menuItem p.price{
-    font-size: 20px;
-    padding: 10px;
-}
-.menu .menuList .menuItem p.description{
-    padding: 10px;
-}
+
 
 @media(max-width:1450px){
     .menu .menuList {

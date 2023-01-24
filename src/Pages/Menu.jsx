@@ -11,7 +11,7 @@ import 'boxicons'
 const Menu = (props) => {
   return (
     <CustomMotion className="menu">
-      <div className="menuTitle">Pizzák</div>
+      <div className="menuTitle"> Pizzák</div>
       <div className="menuList">
         {PizzaList.map(c => <MenuItem food={c} key={c.name} unit={PizzaUnit}/>
         )}

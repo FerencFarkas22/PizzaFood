@@ -3,10 +3,10 @@ import Minital from '../assets/minital.jpg'
 import milanoi from '../assets/milanoiSertesborda.jpg'
 
 
-export const MeatUnit = "Személyes tál";
+export const MeatUnit = "Személy";
 export const MeatList = [
   {
-    name: "Egyszemélyes minitál",
+    name: "Csirkés tál",
     image: Minital,
     description: " natúrszelet, rántott csirkemell, rántott sajt, rántott gomba vegyeskörettel",
     sizes: [
