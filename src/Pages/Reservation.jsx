@@ -36,7 +36,7 @@ const Reservation = () => {
     setMonth(date.getMonth() + 1)
     setDay(date.getDate())
     setFullDate(`Év:${year.toString()}, Hónap:${month.toString()}, Nap:${day.toString()}`);
-
+    setDate(date)
   }
 
   const notify = () => toast(`Az email sikeresen elküldve`, {
@@ -123,11 +123,13 @@ const Reservation = () => {
 
           <label>Egyéb üzenetek</label>
           <textarea name='message' onChange={textHandler} cols="15" rows="10" placeholder='Üzenet...' required></textarea>
-
+          <h3>{`Az ön foglalása: ${year}-${month}-${day}.`}</h3>
           <div className="calendar">
+          
             <Calendar onChange={onChange} value={date} minDate={new Date()} calendarType="ISO 8601" />
             <input type="text" name="user_date" value={fullDate} style={{ display: "none" }} /> {/* Inputba átadtam a full date string értékét hogy emailjsbe el tudjan küldeni*/}
           </div>
+          
           *Kollégáink minden esetben felveszik Önnel a kapcsolatot a pontos időpont, illetve a foglalás véglegesítése miatt!
           <hr />
           ** Amennyiben több mint 6 fő részére szeretne foglalni, kérjük vegye fel velünk a kapcsolatot telefonon keresztül!

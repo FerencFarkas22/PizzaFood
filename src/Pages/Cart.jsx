@@ -32,8 +32,8 @@ const Cart = () => {
             <tr>
               <td>{element.name}</td>
               <td align='center'>{element.other}</td>
-              <td align='center'><button onClick={() => remove(index)}>Törlés</button></td>
-              <td align='right'>{element.price} Ft</td>
+              <td align='center'><button className='cartButton' onClick={() => remove(index)}>Törlés</button></td>
+              <td align='center'>{element.price} Ft</td>
             </tr>
           ))}
 

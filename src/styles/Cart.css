@@ -36,7 +36,8 @@
     font-weight: 200;
 }
 
-.cart button {
+.cart .cartButton {
+    font-size: 20px;
     outline: none;
     border: none;
     padding: 5px 10px;
@@ -47,7 +48,7 @@
     transition: 0.2s all ease;
 }
 
-.cart button:hover {
+.cart .cartButtonton:hover {
     outline: none;
     border: none;
     padding: 5px 10px;
@@ -59,13 +60,14 @@
 
 .cart table {
     padding: 30px 0;
+    text-align: center;
 }
-
+.cart table th, td, tr{
+    border: 1px solid rgb(126, 119, 119);
+}
 .cart table td {
     padding: 15px;
 }
-
-
 
 
 @media (max-width:768px) {

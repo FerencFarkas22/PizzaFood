@@ -37,7 +37,7 @@ export const PizzaList = [
     ]
   },
   {
-    name: "Hawaaii Pizza",
+    name: "Hawaii Pizza",
     image: Hawaaii,
     description: "paradicsomos alap, mozzarella, oregánó, ananász",
     sizes: [
