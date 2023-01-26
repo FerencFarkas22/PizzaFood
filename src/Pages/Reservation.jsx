@@ -17,18 +17,16 @@ const Reservation = () => {
   const [text, setText] = useState('');
   const form = useRef();
 
-
   //A naptár date értékeinek kinyerése
   const [year, setYear] = useState(date.getFullYear());
   const [month, setMonth] = useState(date.getMonth() + 1);
   const [day, setDay] = useState(date.getDate());
-  const [fullDate, setFullDate] = useState(`Év:${year.toString()}, Hónap:${month.toString()}, Nap:${day.toString()}`)
+  const [fullDate, setFullDate] = useState(``)
 
   //A naptár értékeit kinyerjük és stringé alakítjuk
   useEffect(() => {
     setFullDate(`Év:${year.toString()}, Hónap:${month.toString()}, Nap:${day.toString()}`);
   })
-
 
   //Minden változáskor frissül
   const onChange = date => {
@@ -48,8 +46,10 @@ const Reservation = () => {
     draggable: true,
     progress: undefined,
     theme: "dark",
-    type: "success"
+    type: "success",
   })
+
+
   const wrongDatas = () => toast(`Minden mező kitöltése kötelező`, {
     position: "bottom-center",
     autoClose: 1000,
@@ -68,12 +68,12 @@ const Reservation = () => {
       .then((result) => {
         console.log(result.text);
         console.log("message sent");
+        e.target.reset();
         return notify();
       }, (error) => {
         console.log(error.text);
       });
   };
-
 
   const handleWrong = () => {
     return wrongDatas();
@@ -96,13 +96,23 @@ const Reservation = () => {
   }
 
 
+  const handleSubmit = event => {
+    console.log('handleSubmit ran');
+    event.preventDefault();
+
+    // 👇️ clear all input values in the form
+    setTimeout(()=>{
+     
+    },2000)
+    
+  };
 
 
   return (
     <CustomMotion className="contact">
       <div style={{ backgroundImage: `url(${LeftPicture})` }} className="contact-left">
-
       </div>
+
       <div className="contact-right">
         <h2>Asztalfoglalás</h2>
         <form ref={form} method="POST" onSubmit={name === "" || email === "" || tel === "" || text === "" || reserve === "" ? handleWrong : sendEmail}>
@@ -116,18 +126,16 @@ const Reservation = () => {
           <label>Telefonszám</label>
           <input name='user_tel' onChange={telHandler} type="text" autoComplete='off' placeholder='Adja meg a telefonszámát' required />
 
-
           <label>Foglalás ennyi fő részére</label>
           <input name='user_reserve' onChange={reserveHandler} type="number" defaultValue={1} min={1} max={6} autoComplete='off' required />
-
 
           <label>Egyéb üzenetek</label>
           <textarea name='message' onChange={textHandler} cols="15" rows="10" placeholder='Üzenet...' required></textarea>
           <h3>{`Az ön foglalása: ${year}-${month}-${day}.`}</h3>
+
           <div className="calendar">
-          
             <Calendar onChange={onChange} value={date} minDate={new Date()} calendarType="ISO 8601" />
-            <input type="text" name="user_date" value={fullDate} style={{ display: "none" }} /> {/* Inputba átadtam a full date string értékét hogy emailjsbe el tudjan küldeni*/}
+            <input type="text" name="user_date" defaultValue={fullDate} style={{ display: "none" }} /> {/* Inputba átadtam a full date string értékét hogy emailjsbe el tudjan küldeni*/}
           </div>
           
           *Kollégáink minden esetben felveszik Önnel a kapcsolatot a pontos időpont, illetve a foglalás véglegesítése miatt!
@@ -142,5 +150,4 @@ const Reservation = () => {
     </CustomMotion>
   )
 }
-
 export default Reservation

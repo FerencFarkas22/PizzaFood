@@ -5,7 +5,7 @@ import {softDrinkList, softDrinkUnit } from '../datasources/softDrinkList'
 import MenuItem from '../components/MenuItem'
 import CustomMotion from '../components/CustomMotion'
 import '../styles/Menu.css'
-import 'boxicons'
+
 
 
 const Menu = (props) => {

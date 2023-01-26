@@ -10,6 +10,7 @@
     flex-direction: column;
     color: white;
     font-family: 'Poiret One', cursive;
+    overflow-x: hidden;
 
 }
 .carousel-control-next-icon, .carousel-control-prev{

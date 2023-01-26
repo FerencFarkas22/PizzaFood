@@ -65,7 +65,7 @@ const Home = (props) => {
                 <motion.p
                     initial={{x:100, opacity:0}}
                     animate={{ x: 0, opacity:1}}
-                    transition={{ duration: 1, delay:1 }}>Éttermünk közel 150 éves receptjei alapján működnek és a pizzáink kemencében sűlnek! Ha családias ízekre vágyik, térjen be hozzánk!</motion.p>
+                    transition={{ duration: 1, delay:1 }}>Éttermünk közel 150 éves receptjei alapján működnek és a pizzáink kemencében sülnek! Ha családias ízekre vágyik, térjen be hozzánk!</motion.p>
                 <Link to="/menu">
                     <motion.button
                     initial={{y:75, opacity:0}}

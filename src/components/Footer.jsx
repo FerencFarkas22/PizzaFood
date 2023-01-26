@@ -19,7 +19,7 @@ const Footer = () => {
           </span>
         ))}
       </div>
-      <p>PizzaFoot &copy; 2022, Farkas Ferenc</p>
+      <p>PizzaFood &copy; 2022, Farkas Ferenc</p>
     </div>
   )
 }

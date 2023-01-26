@@ -73,11 +73,18 @@
         padding: 0 60px;
         align-items: center;
         height: auto;
+        position:sticky;
     }
     .navbar-right{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        position: absolute;
+       top: 70px;
+        background-color: #242424;
+        height: auto;
+      
+        width: 100%;
     }
     .navbar-right img{
        height: 60px;

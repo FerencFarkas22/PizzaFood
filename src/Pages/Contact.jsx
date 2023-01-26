@@ -44,6 +44,7 @@ const Contact = () => {
         .then((result) => {
             console.log(result.text);
             console.log("message sent");
+            e.target.reset();
             return notify();
         }, (error) => {
             console.log(error.text);
@@ -77,7 +78,7 @@ const Contact = () => {
                 <form ref={form} method="POST" onSubmit={sendEmail}>
 
                     <label>Teljes név</label>
-                    <input name='user_name' type="text" autoComplete='off' onChange={nameHandler} value={name} placeholder='Adja meg a nevét' required/>
+                    <input name='user_name' type="text" autoComplete='off' onChange={nameHandler} defaultValue={name} placeholder='Adja meg a nevét' required/>
 
                     <label>Email</label>
                     <input name='user_email' type="email" autoComplete='off' onChange={emailHandler}  placeholder='Adja meg az e-mail címét' required/>
