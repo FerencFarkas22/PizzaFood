@@ -11,7 +11,7 @@
     top: 0;
     z-index:2;
 }
-
+.navbar-left a{height: 100%; display: flex; align-items: center;}
 .navbar-left{
     height: 100%;
     display: flex;

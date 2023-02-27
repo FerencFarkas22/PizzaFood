@@ -27,7 +27,7 @@ function handleMenuItemClick(){
   return (
     <div className="navbar">
       <div className="navbar-left">
-        <img src={Logo} alt="Header Logo" />
+        <Link to="/"><img src={Logo} alt="Header Logo" /></Link>
         <button onClick={handleNavbarMobile} className="HamburgerButton"><box-icon size="lg" color="#ffffff" name='menu'></box-icon></button>
       </div>
       <div className={navStyle}>

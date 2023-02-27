@@ -11,6 +11,14 @@
     background-color: #242424;
 }
 
+.cartLink .cart{
+    display: none;
+}
+
+.cartLink .cart section{
+    display: none;
+}
+.cartnone{display: none;}
 .menu .menuTitle {
     font-size: 70px;
     margin-top: 20px;
@@ -150,4 +158,35 @@
         width: 95vw;
         grid-template-columns: 1fr;
     }
+    .cartLink .cart{
+        width:70px;
+        min-height: 70px; 
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        z-index: 15;
+        display: flex;
+        align-items: center;justify-content: center;
+        background-color: rgba(0,0,0,.7);
+        transition: .5s all ease;
+}
+.cartLink .cart:hover{
+    background-color: black;
+    
+}
+.cartLink .cart section{
+    background-color: red;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
 }
